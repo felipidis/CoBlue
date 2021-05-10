@@ -2,19 +2,20 @@ console.log('Desafio Bônus')
 console.log()
 let word = 'coblue'
 let word2 = 'Coblue'
-let flag = 0
-let wordConverted = ''
 
 function conversion(word) {
 	let initial = word[0]
 	let conversionArray = []
-
+	let wordConverted = ''
+	let flag = 0
+	
 	if (initial == initial.toUpperCase()) {
 		flag = 1
 	} else {
 		flag = 0
 	}
-
+	
+	//criando um array de strings com cada letra 
 	conversionArray.push(initial)
 
 	for (let i = 1; i < word.length; i++) {
@@ -26,6 +27,8 @@ function conversion(word) {
 			flag = 1
 		}
 	}
+	
+	// passando o array como uma string unica para a variável wordConverted
 	wordConverted = conversionArray.toString().split(',').join('')
 	console.log(wordConverted)
 }
